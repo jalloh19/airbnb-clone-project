@@ -163,3 +163,24 @@ Integrates with trusted third-party payment gateways that adhere to PCI DSS stan
 
 **Importance:**  
 Protects users’ financial information and reduces liability in the event of security incidents.
+
+
+## CI/CD Pipeline
+
+Continuous Integration (CI) and Continuous Deployment (CD) are development practices that automate the process of building, testing, and deploying code. CI/CD pipelines ensure that every code change is automatically validated and deployed in a consistent and reliable manner.
+
+### Purpose of CI/CD
+The CI/CD pipeline helps maintain code quality by running automated tests and security checks before merging changes. It also reduces deployment errors by automating the build and release process, allowing developers to deliver new features and fixes rapidly without manual intervention.
+
+### Tools Used
+- **GitHub Actions:** Automates testing, linting, and deployment workflows directly from the GitHub repository.  
+- **Docker:** Ensures consistent runtime environments by containerizing the application for development, testing, and production.  
+- **Docker Hub:** Serves as a repository for storing and distributing Docker images used across different environments.  
+- **AWS or Heroku:** Provides hosting and scalable infrastructure for automatic deployment from the CI/CD pipeline.
+
+### Benefits
+- Faster and more reliable deployments.  
+- Early detection of integration issues.  
+- Improved collaboration through automated testing and code validation.  
+- Consistency between development, staging, and production environments.
+
