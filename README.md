@@ -112,3 +112,54 @@ Allows users to search for properties using various filters such as location, pr
 
 ### 7. Admin Dashboard
 Provides administrators with tools to monitor platform activity, manage users, properties, and resolve disputes. It serves as the control center for maintaining platform integrity and enforcing policies.
+
+
+## API Security
+
+Securing the backend APIs is critical to protect user data, maintain system integrity, and prevent unauthorized access to the platform. The Airbnb Clone Project implements multiple layers of security to ensure that all transactions and interactions are protected.
+
+### 1. Authentication
+User authentication is required for all protected endpoints using JSON Web Tokens (JWT). This ensures that only verified users can access or modify data related to their accounts, properties, and bookings.
+
+**Importance:**  
+Prevents unauthorized access to sensitive user data and ensures actions are traceable to legitimate users.
+
+---
+
+### 2. Authorization
+Role-based access control (RBAC) determines what actions each type of user can perform (e.g., admin, host, guest). It enforces boundaries such as preventing guests from modifying property listings or accessing admin endpoints.
+
+**Importance:**  
+Ensures users can only perform actions permitted by their roles, reducing data tampering and privilege abuse.
+
+---
+
+### 3. Data Validation and Sanitization
+All API inputs are validated and sanitized to prevent injection attacks such as SQL injection or cross-site scripting (XSS). This ensures only correctly formatted and safe data enters the system.
+
+**Importance:**  
+Prevents malicious input from compromising the database or the overall application security.
+
+---
+
+### 4. HTTPS and Encryption
+All communication between the client and server occurs over HTTPS, and sensitive information (like passwords) is stored using strong hashing algorithms such as bcrypt.
+
+**Importance:**  
+Protects data in transit and at rest from interception and unauthorized access.
+
+---
+
+### 5. Rate Limiting and Throttling
+Implements request rate limiting to restrict the number of API calls a user can make within a given time window. This mitigates denial-of-service (DoS) and brute-force attacks.
+
+**Importance:**  
+Prevents abuse of API endpoints and maintains service availability for legitimate users.
+
+---
+
+### 6. Secure Payment Processing
+Integrates with trusted third-party payment gateways that adhere to PCI DSS standards. Payment-related data is never stored directly on the platform.
+
+**Importance:**  
+Protects users’ financial information and reduces liability in the event of security incidents.
